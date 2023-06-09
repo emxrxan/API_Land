@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,html{
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* === GRID-SYSTEM === */
+.container{
+    background-color: #4d7cff;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row: 1fr 2fr;
+    grid-template-areas: 
+    "input"
+    "info"
+    "info";
+}
+
+.form{
+    grid-area: input;
+}
+
+.county-info{
+    grid-area: info;
+}
+
+/* === GRID-SYSTEM === */
+
+/* === EINGABEFORM === */
+
+#eingabeform{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+#eingabeform > #search{
+    margin-right: 1rem;
+    width: 40%;
+}
+
+#eingabeform > #search > input{
+    width: 100%;
+    height: 2.5rem;
+    padding-left: 1rem;
+    font-weight: bold;
+    border: 2px solid #0044ff;
+    border-radius: 1rem;
+    background-color: #fff;
+    box-shadow: 0 0 2rem #fff;
+}
+
+#eingabeform > #search > input::placeholder{color: #000;}
+
+#eingabeform > #search-button{
+    width: 8%;
+}
+#eingabeform > #search-button > button{
+    width: 100%;
+    height: 2.5rem;
+    font-weight: bold;
+    border: 2px solid #0044ff;
+    border-radius: 1rem;
+    background-color: #4d7cff;
+    box-shadow: 0 0 2rem #fff;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+#eingabeform > #search-button > button:hover{
+    background-color: #0044ff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+@media (max-width:768px) {
+    #eingabeform > #search{width: 65%;}
+    #eingabeform > #search-button{width: 20%;}
+
+}
+/* === EINGABEFORM === */
+
+/* === INFO-BLOCK === */
+
+.county-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.county-info > .bild{
+    text-align: center;
+}
+
+.county-info > .bild > h1{
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.county-info > .bild > img{
+    width: 15rem;
+    height: auto;
+    box-shadow: 0 0 2rem #fff;
+}
+
+.county-info > ul{
+    padding: 1rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    font-size: 1.2rem;
+}
+
+.county-info > ul > li{
+    padding: 0.5rem;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 0 2rem #000;
+    border-radius: 1rem;
+}
+
+.zahl{
+    color: #0044ff;
+}
+
+.county-info > ul > li a{
+    color: #4d7cff;
+}
+
+.county-info > ul > li a:visited{
+    color: #4d7cff;
+}
+
+.county-info > ul > li a:active{
+    color: #0044ff;
+}
+
+@media (max-height: 500px) {
+    .container{
+        height: 200%;
+    }
+}
+
+/* === INFO-BLOCK === */
