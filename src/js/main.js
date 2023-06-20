@@ -1,5 +1,6 @@
 "use-strict";
 
+//Holt alle Daten aus der API
 async function api(){
     try{
         const url = 'https://restcountries.com/v3.1/all?fields=name,capital,region,languages,maps,population,flags,area';
@@ -9,6 +10,11 @@ async function api(){
     } catch(error){alert("Server Problems. Please try later!")}
 }
 
+/**
+ * 
+ * @param {Daten aus der API} data 
+ * @returns gibt das HTML-TAG zurück mit den jeweiligen Land Daten
+ */
 function html_generieren_info(data){
     const html_generieren_info =
     ` 
@@ -36,6 +42,11 @@ function daten_ausgeben(data){
     document.querySelector(".county-info").insertAdjacentHTML("afterbegin", html_generieren_info(data));
 }
 
+/**
+ * 
+ * @param {API Daten} api_liste 
+ * aus ein eingabeformular input holen und Land ausgeben lassen
+ */
 function hole_daten(api_liste){
     document.querySelector(".form > #eingabeform").addEventListener("submit", (data)=>{
         data.preventDefault();
