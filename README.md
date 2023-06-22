@@ -2,7 +2,7 @@
 
 <h3>About</h3>
 <p align="left">
-  Dieses Projekt zeigt die Daten eines Landes an. Wie zum Beispiel wie viele Einwohne oder wie groß das Land ist usw. . Gearbeitet wurder mit <a     
+  Dieses Projekt zeigt die Daten eines Landes an. Wie zum Beispiel wie viele Einwohne oder wie groß das Land ist usw. . Gearbeitet wurde mit <a     
   href="https://restcountries.com/">RESTFUL API</a>
 </p>
 
